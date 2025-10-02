@@ -2,6 +2,8 @@
 // 1) 버튼을 눌렀을 때 각 기능을 만족할 것.
 // 2) 함수를 만들어서 호출하는 식으로 할 것.
 
+// 기본 예시
+
 document.addEventListener("DOMContentLoaded", () => {
     const topDisplay = document.querySelector(".calculate_top");
     const bottomDisplay = document.querySelector(".calculate_bottom");
@@ -10,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let secondNumber = "";
     let operator = null;
 
+    // 숫자 버튼 이벤트
     document.querySelectorAll(".seven, .eight, .nine, .four, .five, .six, .one, .two, .three, .zero")
         .forEach(button => {
             button.addEventListener("click", () => {
@@ -20,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     secondNumber += button.textContent;
                     topDisplay.textContent = firstNumber + " " + operator + " " + secondNumber;
                 }
-            })
-        })
+            });
+        });
 
     // + 버튼
     document.querySelector(".plus").addEventListener("click", () => {
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             operator = "+";
             topDisplay.textContent = firstNumber + " " + operator;
         }
-    })
+    });
 
     // = 버튼
     document.querySelector(".result").addEventListener("click", () => {
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const result = Number(firstNumber) + Number(secondNumber);
             bottomDisplay.textContent = result;
         }
-    })
+    });
 
     // C 버튼
     document.querySelector(".reset").addEventListener("click", () => {
@@ -46,5 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
         operator = null;
         topDisplay.textContent = "";
         bottomDisplay.textContent = "";
-    })
-})
+    });
+});
