@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game.css">
+    <title>가위바위보</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="top">
+            <h2>Rock Paper Scissors with Compose</h2>
+            <button class="reset">RESET THE TOUR</button>
+        </div>
+        <div class="bottom">
+            <div class="score_wrap">
+                <div class="score_player">
+                    <p>PLAYER SCORE: </p>
+                    <p class="c_player"></p>
+                </div>
+                 <div class="score_computer">
+                    <p>COMPUTER SCORE: </p>
+                    <p class="c_computer"></p>
+                </div>
+            </div>
+            <div class="result_wrap">
+                <h1 class="result">COMPUTER WON ! 🎉</h1>
+                <div class="img_wrap">
+                    <div class="img_palyer">
+                        <img class="i_player" src="" alt="">
+                    </div>
+                    <p>vs</p>
+                    <div class="img_computer">
+                        <img class="i_computer" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="chooser_wrap">
+                <p>Choose your move, rock paper or scissors?</p>
+                <div class="button_wrap">
+                    <button class="rock">ROCK</button>
+                    <button class="paper">PAPER</button>
+                    <button class="scissors">SCISSORS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./game.js"></script>
+</body>
+
+</html>

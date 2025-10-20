@@ -11,14 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Addbutton을 눌렀을 때 Add를 호출하고 return 받은 값을 정답란에 출력하세요.
-    // 만약 두 수를 입력받았을 때 빈값이라면 alert을 이용해 '두 수를 모두 입력해주세요'라고 안내하도록 하세요.
-
     Addbutton.addEventListener("click", () =>{
         let num1 = Number(FristN.value);
         let num2 = Number(SecondN.value);
 
         if(num1 === 0 || num2 === 0){
-            alert("두 수를 모두 입력해주세요");
+            alert("두 개의 숫자를 입력하세요.");
             return;
         }
 
