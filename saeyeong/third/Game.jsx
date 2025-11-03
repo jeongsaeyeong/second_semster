@@ -8,13 +8,13 @@ const choiceEmojis = {
 };
 
 // 컴퓨터 선택 정하는 함수
-function getComputerChoice() {
+const getComputerChoice = () => {
     const randomIndex = Math.floor(Math.random() * 3);
     return choices[randomIndex];
 }
 
 // 승부 판별 함수
-function getResult(user, computer) {
+const getResult = (user, computer) => {
     if (user === computer) {
         return '무승부!';
     }
@@ -28,11 +28,10 @@ function getResult(user, computer) {
     return '패배...';
 }
 
-// 결과에 따른 색상 반환 함수
-function getResultColor(result) {
-    if (result === '승리!') return '#5cb85c'; // 초록색
-    if (result === '패배...') return '#d9534f'; // 빨간색
-    return '#333'; // 검은색 (무승부)
+const getResultColor = (result) => {
+    if (result === '승리!') return '#5cb85c';
+    if (result === '패배...') return '#d9534f';
+    return '#333';
 }
 
 const Game = () => {
@@ -80,10 +79,6 @@ const Game = () => {
                 <p>당신의 선택: <span id="user-choice">{userChoice && choiceEmojis[userChoice]}</span></p>
                 <p>컴퓨터의 선택: <span id="computer-choice">{computerChoice && choiceEmojis[computerChoice]}</span></p>
 
-                {/* - 동적 스타일링
-                  - 바닐라: element.style.color = ...
-                  - 리액트: style={{ key: value }} 객체를 전달합니다.
-                */}
                 <h3>
                     결과:
                     <span id="game-result" style={{ color: getResultColor(gameResult) }}>

@@ -1,0 +1,61 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+#game-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#button-wrapper {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007aff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result-area {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+#result-area p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+#game-result {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d9534f; /* 기본값을 패배 색상으로 */
+}
